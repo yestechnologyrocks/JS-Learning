@@ -8,17 +8,17 @@ Build confident JavaScript fundamentals before moving into TypeScript, React, No
 
 ## JavaScript module plan — 29 hours
 
-| Session | Topic | Hours | Practical outcome |
-| --- | --- | ---: | --- |
-| JS-01 | Values, Variables & Scope | 3 | Use variables, comparisons, and block scope confidently. |
-| JS-02 | Functions, Parameters & Return Values | 3 | Write reusable functions with clear input and output. |
-| JS-03 | Arrays & Objects: Safe Data Handling | 4 | Read and update application data safely. |
-| JS-04 | Array Transformations & Data Thinking | 3 | Use `map`, `filter`, `find`, and `reduce` intentionally. |
-| JS-05 | Promises & Async/Await Foundations | 3 | Handle asynchronous success and failure. |
-| JS-06 | Fetch, HTTP Results & Resilient API Calls | 4 | Build API calls with loading, empty, success, and error states. |
-| JS-07 | Event Loop & Async Ordering | 3 | Explain synchronous code, microtasks, and timer tasks. |
-| JS-08 | DOM & Events | 4 | Build an interactive browser task list. |
-| JS-09 | Modules, Debugging & Integration Challenge | 2 | Organize a small feature and debug it systematically. |
+| Session | Topic                                      | Hours | Practical outcome                                               |
+| ------- | ------------------------------------------ | ----: | --------------------------------------------------------------- |
+| JS-01   | Values, Variables & Scope                  |     3 | Use variables, comparisons, and block scope confidently.        |
+| JS-02   | Functions, Parameters & Return Values      |     3 | Write reusable functions with clear input and output.           |
+| JS-03   | Arrays & Objects: Safe Data Handling       |     4 | Read and update application data safely.                        |
+| JS-04   | Array Transformations & Data Thinking      |     3 | Use `map`, `filter`, `find`, and `reduce` intentionally.        |
+| JS-05   | Promises & Async/Await Foundations         |     3 | Handle asynchronous success and failure.                        |
+| JS-06   | Fetch, HTTP Results & Resilient API Calls  |     4 | Build API calls with loading, empty, success, and error states. |
+| JS-07   | Event Loop & Async Ordering                |     3 | Explain synchronous code, microtasks, and timer tasks.          |
+| JS-08   | DOM & Events                               |     4 | Build an interactive browser task list.                         |
+| JS-09   | Modules, Debugging & Integration Challenge |     2 | Organize a small feature and debug it systematically.           |
 
 ## Learning approach
 

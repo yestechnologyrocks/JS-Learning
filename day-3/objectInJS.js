@@ -57,3 +57,5 @@ console.log(tv);
 // Create a `task` object, then change its status from TODO to IN_PROGRESS.
 // Create a variable named `propertyToShow` containing `name`. Use bracket notation to log that property from your project object.
 // Write one sentence: When would you use an object instead of several separate variables?
+// Answer for the last question: You would use an object instead of several separate variables when you want to group related data together,
+// making it easier to understand.

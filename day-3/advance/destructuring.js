@@ -23,3 +23,14 @@ const product = {
 };
 const { p_n: productName, brand } = product;
 console.log(productName);
+
+const dog = {
+  id: 1,
+  name: "Tommy",
+  color: "grey",
+  n: ["happy", "caring"],
+};
+dog.n.push("sweet");
+const { n: nature } = dog;
+
+console.log(nature);

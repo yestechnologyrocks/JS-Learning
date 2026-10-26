@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive JavaScript event loop teaching demo." />
+    <title>JavaScript Event Loop Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Interactive lecture demo</p>
+        <h1 id="page-title">How the JavaScript Event Loop Works</h1>
+        <p>Click <strong>Next step</strong> to watch synchronous code, Promise callbacks, and timer callbacks move through the runtime.</p>
+      </section>
+
+      <section class="runtime" aria-label="JavaScript runtime simulator">
+        <div class="runtime-header">
+          <div>
+            <p class="eyebrow">Example code</p>
+            <h2>Why does the console print <code>A, D, C, B</code>?</h2>
+          </div>
+          <div class="step-counter" id="step-counter" aria-live="polite"></div>
+        </div>
+
+        <div class="runtime-grid">
+          <section class="code-panel" aria-label="JavaScript code example">
+            <ol class="code-list">
+              <li data-line="1"><span class="line-number">1</span><code>console.log('A');</code></li>
+              <li data-line="2"><span class="line-number">2</span><code>setTimeout(() =&gt; console.log('B'), 0);</code></li>
+              <li data-line="3"><span class="line-number">3</span><code>Promise.resolve().then(() =&gt; console.log('C'));</code></li>
+              <li data-line="4"><span class="line-number">4</span><code>console.log('D');</code></li>
+            </ol>
+          </section>
+
+          <section class="queues-panel" aria-label="Runtime queues">
+            <div class="lane stack-lane">
+              <div class="lane-heading"><span class="lane-dot"></span><div><h3>Call stack</h3><p>Runs the current synchronous code.</p></div></div>
+              <div class="token-area" id="call-stack" aria-live="polite"></div>
+            </div>
+
+            <div class="lane api-lane">
+              <div class="lane-heading"><span class="lane-dot"></span><div><h3>Browser APIs</h3><p>Handles timers, events, and network work.</p></div></div>
+              <div class="token-area" id="browser-apis" aria-live="polite"></div>
+            </div>
+
+            <div class="queues-row">
+              <div class="lane micro-lane">
+                <div class="lane-heading"><span class="lane-dot"></span><div><h3>Microtask queue</h3><p>Promise callbacks</p></div></div>
+                <div class="token-area" id="microtasks" aria-live="polite"></div>
+              </div>
+              <div class="lane macro-lane">
+                <div class="lane-heading"><span class="lane-dot"></span><div><h3>Macrotask queue</h3><p>Timers and events</p></div></div>
+                <div class="token-area" id="macrotasks" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="lane output-lane">
+              <div class="lane-heading"><span class="lane-dot"></span><div><h3>Console output</h3><p>What the learner sees.</p></div></div>
+              <div class="token-area" id="console-output" aria-live="polite"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="explanation" id="explanation" aria-live="polite"></div>
+
+        <div class="controls" aria-label="Simulation controls">
+          <button class="button button-secondary" id="previous" type="button">← Previous</button>
+          <button class="button button-primary" id="next" type="button">Next step →</button>
+          <button class="button button-quiet" id="reset" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section class="concepts" aria-labelledby="concept-title">
+        <h2 id="concept-title">Teaching notes</h2>
+        <div class="concept-grid">
+          <article><h3>Call stack</h3><p>JavaScript runs synchronous statements here, one at a time.</p></article>
+          <article><h3>Microtasks</h3><p>Promise <code>then</code>, <code>catch</code>, and <code>finally</code> callbacks. They run first after the stack is empty.</p></article>
+          <article><h3>Macrotasks</h3><p>Timer callbacks, browser events, and message tasks. JavaScript takes these only after microtasks are empty.</p></article>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

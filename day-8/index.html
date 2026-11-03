@@ -101,29 +101,34 @@
     </main>
 
     <script>
+      function renderTaskCount() {
+        const count = document.querySelector("#task-count");
+        console.log(count.textContent);
+      }
+      renderTaskCount();
       // const taskList = document.querySelector("#task-list");
 
       // const item = document.createElement("li");
       // item.textContent = "Task 4";
       // taskList.appendChild(item);
 
-      const tasks = ["Task 1", "Task 2", "Task 3"];
-      function renderTasks(tasks) {
-        const taskList = document.querySelector("#task-list");
+      // const tasks = ["Task 1", "Task 2", "Task 3"];
+      // function renderTasks(tasks) {
+      //   const taskList = document.querySelector("#task-list");
 
-        tasks.forEach((task) => {
-          const item = document.createElement("li");
-          item.textContent = task;
-          taskList.appendChild(item);
-        });
-      }
-      renderTasks(tasks);
+      //   tasks.forEach((task) => {
+      //     const item = document.createElement("li");
+      //     item.textContent = task;
+      //     taskList.appendChild(item);
+      //   });
+      // }
+      // renderTasks(tasks);
 
-      function renderTaskCount() {
-        const count = document.querySelector("#task-count");
-        console.log(count.textContent);
-      }
-      renderTaskCount();
+      // function renderTaskCount() {
+      //   const count = document.querySelector("#task-count");
+      //   console.log(count.textContent);
+      // }
+      // renderTaskCount();
       // // Step 1: select elements from the page
       // const listElement = document.querySelector("#task-list");
       // const countElement = document.querySelector("#task-count");
@@ -155,5 +160,6 @@
       //   if (event.key === "Enter") addTask();
       // });
     </script>
+    <script src="dom.js" defer></script>
   </body>
 </html>

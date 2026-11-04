@@ -77,6 +77,9 @@
   <body>
     <main>
       <h1>DOM Basics: A Task List</h1>
+      <p id="loading" style="color: red; font-size: 30px; font-weight: bold">
+        Loading...
+      </p>
       <p class="note">
         Open the browser console, then use the controls below. Watch how
         JavaScript finds and changes HTML elements.
@@ -101,11 +104,11 @@
     </main>
 
     <script>
-      function renderTaskCount() {
-        const count = document.querySelector("#task-count");
-        console.log(count.textContent);
-      }
-      renderTaskCount();
+      // function renderTaskCount() {
+      //   const count = document.querySelector("#task-count");
+      //   console.log(count.textContent);
+      // }
+      // renderTaskCount();
       // const taskList = document.querySelector("#task-list");
 
       // const item = document.createElement("li");
@@ -160,6 +163,6 @@
       //   if (event.key === "Enter") addTask();
       // });
     </script>
-    <script src="dom.js" defer></script>
+    <script src="../day-6/pathsInFetch.js" defer></script>
   </body>
 </html>

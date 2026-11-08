@@ -6,7 +6,7 @@ const uiState = {
 
 const loader = document.querySelector("#loading");
 
-async function loadTasks() {
+export async function loadTasks() {
   // Job 1: Fetching the data
   uiState.isLoading = true;
   uiState.errorMessage = "";
@@ -45,7 +45,7 @@ async function fetchData() {
   );
   return reponse;
 }
-loadTasks();
+// loadTasks();
 
 // Student homework
 // Draw four simple task-list screen states: Loading, Success, Empty, Error.

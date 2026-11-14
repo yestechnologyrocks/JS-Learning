@@ -14,8 +14,10 @@ export async function loadTasks() {
 
   setTimeout(async () => {
     try {
+      debugger;
       const reponse = await fetchData();
       if (reponse.status === 200) {
+        debugger;
         uiState.tasks = await reponse.json();
         const taskList = document.querySelector("#task-list");
 

@@ -10,6 +10,8 @@ export async function fetchData() {
     "https://jsonplaceholder.typicode.com/posts?userId=10"
   );
   const data = await reponse.json();
+
+  // {}
   return data;
 }
 

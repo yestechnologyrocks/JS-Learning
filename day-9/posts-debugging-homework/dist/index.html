@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts Debugging Homework</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Posts Debugging Homework</h1>
+      <p>
+        Open DevTools → Console and Network. Then click the button and follow
+        the data.
+      </p>
+
+      <button id="load-posts-button">Load posts</button>
+      <p id="status-message">Posts have not been loaded yet.</p>
+      <section id="posts-container" aria-live="polite"></section>
+
+      <section class="homework">
+        <h2>Student homework</h2>
+        <ol>
+          <li>Use the Console to find the posts array.</li>
+          <li>Use Network to inspect the API request and response.</li>
+          <li>
+            Change <code>userId=10</code> to another number. What changes?
+          </li>
+          <li>
+            Temporarily change <code>#posts-container</code> to a wrong
+            selector. Read the error and fix it.
+          </li>
+          <li>
+            Add a <code>console.log(post)</code> inside the loop. What
+            properties does one post have?
+          </li>
+          <li>
+            Write the essay about what you understood about this application.
+          </li>
+        </ol>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

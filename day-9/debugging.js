@@ -18,3 +18,20 @@
 // Option 3: Add debugger; statement in code and open the console -> source tab. This will pause the execution of the code at that line, allowing you to inspect the values of variables and step through the code line by line to identify where the problem is occurring.
 
 // Homework: Follow the file here: day-9/posts-debugging-homework/dist/index.html
+
+const fetchData = async () => {
+  debugger;
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    console.log("Getting response?", response);
+    if (!response.ok) {
+      console.log("response.ok is not working?", response.ok);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
+};

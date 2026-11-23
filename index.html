@@ -77,6 +77,30 @@
   <body>
     <main>
       <h1>DOM Basics: A Task List</h1>
+      <h2>Form</h2>
+
+      <p
+        id="form-message"
+        style="
+          background: greenyellow;
+          padding: 10px;
+          font-size: 25px;
+          display: none;
+        "
+      ></p>
+      <p
+        id="form-error-message"
+        style="background: red; padding: 10px; font-size: 25px; display: none"
+      ></p>
+      <form id="task-form" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br /><br />
+        <button type="submit">Submit</button>
+      </form>
       <p id="loading" style="color: red; font-size: 30px; font-weight: bold">
         Loading...
       </p>
@@ -103,66 +127,6 @@
       </div> -->
     </main>
 
-    <script>
-      // function renderTaskCount() {
-      //   const count = document.querySelector("#task-count");
-      //   console.log(count.textContent);
-      // }
-      // renderTaskCount();
-      // const taskList = document.querySelector("#task-list");
-
-      // const item = document.createElement("li");
-      // item.textContent = "Task 4";
-      // taskList.appendChild(item);
-
-      // const tasks = ["Task 1", "Task 2", "Task 3"];
-      // function renderTasks(tasks) {
-      //   const taskList = document.querySelector("#task-list");
-
-      //   tasks.forEach((task) => {
-      //     const item = document.createElement("li");
-      //     item.textContent = task;
-      //     taskList.appendChild(item);
-      //   });
-      // }
-      // renderTasks(tasks);
-
-      // function renderTaskCount() {
-      //   const count = document.querySelector("#task-count");
-      //   console.log(count.textContent);
-      // }
-      // renderTaskCount();
-      // // Step 1: select elements from the page
-      // const listElement = document.querySelector("#task-list");
-      // const countElement = document.querySelector("#task-count");
-      // const inputElement = document.querySelector("#task-input");
-      // const addButton = document.querySelector("#add-task");
-
-      // // Look at these two elements in the browser console.
-      // console.log(listElement, countElement);
-
-      // function updateTaskCount() {
-      //   const numberOfTasks = listElement.children.length;
-      //   countElement.textContent = numberOfTasks;
-      // }
-
-      // function addTask() {
-      //   const taskText = inputElement.value.trim();
-      //   if (taskText === "") return;
-
-      //   const newTask = document.createElement("li");
-      //   newTask.textContent = taskText;
-      //   listElement.appendChild(newTask);
-      //   inputElement.value = "";
-      //   updateTaskCount();
-      //   inputElement.focus();
-      // }
-
-      // addButton.addEventListener("click", addTask);
-      // inputElement.addEventListener("keydown", function (event) {
-      //   if (event.key === "Enter") addTask();
-      // });
-    </script>
     <script type="module" src="../day-9/app.js" defer></script>
   </body>
 </html>

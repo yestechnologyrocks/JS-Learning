@@ -8,17 +8,14 @@ const loader = document.querySelector("#loading");
 
 export async function loadTasks() {
   // Job 1: Fetching the data
-  debugger;
   uiState.isLoading = true;
   uiState.errorMessage = "";
   loader.style.display = "block";
 
   setTimeout(async () => {
     try {
-      debugger;
       const reponse = await fetchData();
       if (reponse.status === 200) {
-        debugger;
         uiState.tasks = await reponse.json();
         const taskList = document.querySelector("#task-list");
 

@@ -4,8 +4,6 @@
 import * as task from "./taskAPI.js";
 import { loadTasks } from "../day-6/pathsInFetch.js";
 import { add, subtract } from "./utils.js";
-
-console.log("Addition: ", add(2, 3));
-console.log("Substraction: ", subtract(5, 2));
-// const data = await fetchData();
+import { formManagement } from "../day-8/form.js";
+formManagement();
 loadTasks();
